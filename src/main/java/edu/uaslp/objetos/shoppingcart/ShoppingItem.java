@@ -34,4 +34,19 @@ public final class ShoppingItem {
         return unitCostInCents / 100.0;
     }
 
+    public boolean equals(Object o){
+        ShoppingItem other = (ShoppingItem) o;
+         if (!other.code.equals(this.code)){
+             return false;
+         }
+        if (!other.name.equals(this.name)){
+            return false;
+        }
+        if (other.unitCostInCents != (this.unitCostInCents)){
+            return false;
+        }
+
+         return true;
+    }
+
 }
